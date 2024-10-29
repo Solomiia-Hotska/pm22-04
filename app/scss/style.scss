@@ -1,0 +1,77 @@
+/* Загальний стиль */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper - вирівнює sidebar і main content поруч */
+.wrapper {
+    display: flex;
+    flex-direction: row;  /* Розміщує елементи по горизонталі */
+    justify-content: flex-start;  /* Вирівнює елементи по лівому краю */
+    align-items: flex-start;  /* Вирівнює елементи на початку сторінки */
+    margin: 20px;
+}
+
+.main-content {
+    width: 65%;
+    padding: 20px;
+    order: 2; /* Основний контент буде праворуч */
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #ca2121;
+    padding: 20px;
+    margin-right: 20px; /* Додає відступ між sidebar і основним контентом */
+    order: 1; /* Sidebar буде зліва */
+}
+
+h1 {
+    color: #f2c200;
+    font-size: 36px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h3 i {
+    color: #f2c200;
+    margin-right: 10px;
+}
+
+h4 {
+    color: #f2c200;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.contact, .references, .education {
+    margin-bottom: 20px;
+}
+
+/* Секція контактів */
+.contact i, .references i, .education i {
+    color: #000000;
+}
+
+/* Стиль для навичок */
+.skill div {
+    background-color: #f40076;
+    height: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}

@@ -6,72 +6,87 @@ body {
     padding: 0;
 }
 
-/* Wrapper - вирівнює sidebar і main content поруч */
-.wrapper {
-    display: flex;
-    flex-direction: row;  /* Розміщує елементи по горизонталі */
-    justify-content: flex-start;  /* Вирівнює елементи по лівому краю */
-    align-items: flex-start;  /* Вирівнює елементи на початку сторінки */
-    margin: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.main-content {
-    width: 65%;
-    padding: 20px;
-    order: 2; /* Основний контент буде праворуч */
-}
-
+/* Ліва колонка (сайдбар) */
 .sidebar {
-    width: 30%;
-    background-color: #fffefe;
+    background-color: #333; /* Темно-сірий фон */
     padding: 20px;
-    margin-right: 20px; /* Додає відступ між sidebar і основним контентом */
-    order: 1; /* Sidebar буде зліва */
+    color: white; /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
 }
 
-h1 {
-    color: #f2c200;
-    font-size: 36px;
+/* Заголовки та текст в боковій панелі */
+.sidebar h3, 
+.sidebar p, 
+.sidebar strong, 
+.sidebar a {
+    color: white; /* Білий колір тексту для заголовків, параграфів та посилань у боковій панелі */
 }
 
-h2 {
-    color: #333;
+.sidebar i {
+    color: white; /* Білий колір іконок у боковій панелі */
+}
+
+/* Права колонка (основний контент) */
+.main-content {
+    background-color: #fff; /* Білий фон */
+    padding: 20px;
+    color: #333; /* Чорний колір тексту для основного контенту */
+}
+
+/* Заголовки в основному контенті */
+.main-content h1 {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #333; /* Чорний колір для заголовка H1 у основному контенті */
+    font-weight: 800;
+    font-family: "Raleway", sans-serif;
+}
+
+.main-content h2 {
+    color: #333; /* Чорний колір для заголовка H2 */
     font-size: 24px;
 }
 
-h3 {
-    color: #333;
+.main-content h3 {
+    color: #333; /* Чорний колір для заголовка H3 */
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-h3 i {
-    color: #f2c200;
-    margin-right: 10px;
-}
-
-h4 {
-    color: #f2c200;
+.main-content h4 {
+    color: #333; /* Чорний колір для заголовка H4 */
     margin-top: 20px;
 }
 
-p {
+.main-content p {
     line-height: 1.5;
-}
-
-.contact, .references, .education {
-    margin-bottom: 20px;
+    color: #333; /* Чорний колір для тексту параграфів в основному контенті */
 }
 
 /* Секція контактів */
 .contact i, .references i, .education i {
-    color: #000000;
+    color: white; /* Білий колір іконок у секціях контактів */
 }
 
 /* Стиль для навичок */
-.skill div {
-    background-color: #f40076;
+.skills .progress {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.skills .progress-bar {
+    background-color: #fbf70c; /* Яскраво-жовтий колір для заповнення прогресу */
     height: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
+}
+
+.skills span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }

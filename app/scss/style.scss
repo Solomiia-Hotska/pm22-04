@@ -16,6 +16,118 @@ body {
     background-color: #333; /* Темно-сірий фон */
     padding: 20px;
     color: white; /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
+    width: 320px;
+}
+
+
+
+.section {
+  margin-bottom: 20px;
+  padding-left: 10px; /* Відступ від лівого краю */
+}
+
+.section h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-indent: 10px; /* Невеликий відступ заголовка всередину */
+}
+
+.section p {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  font-size: 0.9em;
+  text-indent: 10px; /* Відступ для тексту */
+}
+
+.contact h3 {
+    font-family: 'Montserrat', sans-serif; /* Застосовує шрифт Montserrat */
+    font-weight: 700; /* Жирність шрифту */
+    font-size: 1.5em; /* Розмір шрифту */
+    text-transform: uppercase; /* Великі літери */
+    color: #FFFFFF; /* Білий колір для тексту */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0; /* Прибрати стандартні відступи */
+  }
+  
+  .contact h3 i {
+    font-size: 0.8em; /* Розмір іконки відповідно до тексту */
+  }
+
+
+.references h3 {
+    font-family: 'Montserrat', sans-serif; /* Застосовує шрифт Montserrat */
+    font-weight: 700; /* Жирність шрифту */
+    font-size: 1.5em; /* Розмір шрифту */
+    text-transform: uppercase; /* Великі літери */
+    color: #FFFFFF; /* Білий колір для тексту */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0; /* Прибрати стандартні відступи */
+  }
+  .references h3 i {
+    font-size: 0.7em; /* Розмір іконки відповідно до тексту */
+  }
+  
+  .education h3 {
+    font-family: 'Montserrat', sans-serif; /* Застосовує шрифт Montserrat */
+    font-weight: 700; /* Жирність шрифту */
+    font-size: 1.5em; /* Розмір шрифту */
+    text-transform: uppercase; /* Великі літери */
+    color: #FFFFFF; /* Білий колір для тексту */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0; /* Прибрати стандартні відступи */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .education h3 i {
+    font-size: 0.7em; /* Розмір іконки відповідно до тексту */
+  }
+
+
+
+
+.icon {
+  margin-right: 10px; /* Відступ іконок від тексту */
+  color: #FFD700; /* Колір іконок */
+}
+
+/* Лінії, що розділяють секції */
+.section-divider {
+  border-bottom: 1px dashed #666;
+  margin: 15px 0;
+}
+
+
+
+
+
+/* Зробити іконки круглими з жовтим фоном */
+.sidebar i {
+    background-color: white; /* Жовтий колір */
+    color: #333; /* Колір іконки */
+    border-radius: 50%; /* Круглий фон */
+    padding: 8px; /* Внутрішній відступ для розміру кола */
+    margin-right: 10px; /* Відступ праворуч */
+    font-size: 14px; /* Розмір іконки */
+    width: 30px; /* Ширина та висота для кола */
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Заголовки та текст в боковій панелі */
@@ -27,7 +139,7 @@ body {
 }
 
 .sidebar i {
-    color: white; /* Білий колір іконок у боковій панелі */
+    color: #333; /* Білий колір іконок у боковій панелі */
 }
 
 /* Права колонка (основний контент) */
@@ -41,9 +153,18 @@ body {
 .main-content h1 {
     font-size: 48px;
     text-transform: uppercase;
-    color: #333; /* Чорний колір для заголовка H1 у основному контенті */
+     /* Чорний колір для заголовка H1 у основному контенті color: #333; */
     font-weight: 800;
     font-family: "Raleway", sans-serif;
+
+    .first-name {
+        color: #333; /* Чорний колір для BRIAN R. */
+    }
+    
+    .last-name {
+        color: #f2ab01; /* Жовтий колір для BAXTER */
+    }
+
 }
 
 .main-content h2 {
@@ -67,9 +188,28 @@ body {
     color: #333; /* Чорний колір для тексту параграфів в основному контенті */
 }
 
+
+.yellow-circle {
+    background-color: #f2ab01; /* Жовтий колір фону */
+    border-radius: 50%; /* Кругла форма */
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Фіксована ширина */
+    height: 40px; /* Фіксована висота */
+    margin-right: 10px;
+}
+
+.yellow-circle i {
+    color: #333; /* Чорний колір для самої іконки */
+    font-size: 16px; /* Розмір іконки */
+}
+
+
 /* Секція контактів */
 .contact i, .references i, .education i {
-    color: white; /* Білий колір іконок у секціях контактів */
+    color: #333; /* Білий колір іконок у секціях контактів */
 }
 
 /* Стиль для навичок */
@@ -81,7 +221,7 @@ body {
 }
 
 .skills .progress-bar {
-    background-color: #fbf70c; /* Яскраво-жовтий колір для заповнення прогресу */
+    background-color: #f2ab01; /* Яскраво-жовтий колір для заповнення прогресу */
     height: 10px;
 }
 
@@ -89,4 +229,71 @@ body {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
+}
+
+
+/* Контейнер для телефону */
+.phone-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.phone-container .fa-phone {
+    margin-right: 10px; /* Відстань між іконкою і номерами */
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    border-radius: 50%;
+    padding: 8px;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-numbers a {
+    color: white; /* Білий текст для посилань у боковій панелі */
+    text-decoration: none;
+    margin-bottom: 5px; /* Відстань між номерами */
+}
+
+.phone-numbers a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+.contact .phone-container,
+.contact .email-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact .phone-numbers,
+.contact .emails {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .phone-numbers a,
+.contact .emails a {
+    color: white; /* або інший колір, який підходить */
+    text-decoration: none;
+    margin: 2px 0;
 }

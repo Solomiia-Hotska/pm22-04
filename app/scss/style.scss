@@ -13,11 +13,15 @@ body {
 
 /* Ліва колонка (сайдбар) */
 .sidebar {
+   position: relative;
     background-color: #333; /* Темно-сірий фон */
     padding: 20px;
     color: white; /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
     width: 320px;
 }
+
+
+
 
 
 
@@ -147,6 +151,10 @@ body {
     background-color: #fff; /* Білий фон */
     padding: 20px;
     color: #333; /* Чорний колір тексту для основного контенту */
+    overflow: hidden;
+}
+.main-content {
+    margin-top: 50px; /* Змінюйте значення за потребою */
 }
 
 /* Заголовки в основному контенті */
@@ -188,6 +196,14 @@ body {
     color: #333; /* Чорний колір для тексту параграфів в основному контенті */
 }
 
+.skills-icon {
+    position: relative;
+    left: -1px; /* або інше значення для тонкого налаштування */
+}
+
+
+
+
 
 .yellow-circle {
     background-color: #f2ab01; /* Жовтий колір фону */
@@ -203,8 +219,9 @@ body {
 
 .yellow-circle i {
     color: #333; /* Чорний колір для самої іконки */
-    font-size: 16px; /* Розмір іконки */
+    font-size: 23px; /* Розмір іконки */
 }
+
 
 
 /* Секція контактів */
@@ -213,22 +230,31 @@ body {
 }
 
 /* Стиль для навичок */
-.skills .progress {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 10px;
+/* Контейнер для кожного повзунка */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Проміжок між прогрес-барами */
 }
 
-.skills .progress-bar {
+.progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-label {
+    flex: 1;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333; /* Колір тексту */
+}
+
+.progress-bar {
     background-color: #f2ab01; /* Яскраво-жовтий колір для заповнення прогресу */
     height: 10px;
-}
-
-.skills span {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+    border-radius: 5px; /* Заокруглення країв */
+    flex: 1;
 }
 
 
@@ -297,3 +323,65 @@ body {
     text-decoration: none;
     margin: 2px 0;
 }
+
+
+
+
+.text-container {
+    position: relative; /* Встановлюємо позицію контейнера */
+    display: block; /* Зробимо контейнер для тексту компактним */
+    padding: 15px; /* Внутрішні відступи всередині прямокутника */
+    background-color: #f0f0f0; /* Фон */
+    margin: 10px 0; /* Відступи зовні */
+    width: calc(152% - 320px); /* Зменшуємо ширину, щоб дотягнути до сайдбару (320px — ширина сайдбару) */
+    float: right; /* Вирівнюємо правий край */
+}
+
+.rectangle-background {
+    position: absolute; /* Встановлюємо позицію відносно text-container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Займає всю площу контейнера */
+    background-color: rgba(242, 171, 1, 0.5); /* Жовтий з прозорістю */
+    z-index: -1; /* Поміщаємо його за текстом */
+}
+
+/* Контейнер для фотографії */
+.photo-container {
+    position: relative; /* Відносне позиціонування для розміщення елементів всередині */
+    width: 200px; /* Ширина фото */
+    height: 200px; /* Висота фото */
+}
+
+/* Фон-трикутник позаду */
+.photo-container::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-top: 300px solid #f2ab01; /* Жовтий трикутник */
+    border-right: 320px solid transparent;
+    z-index: 0; /* Залишається позаду фотографії */
+}
+
+.sidebar .contact, .sidebar .references, .sidebar .education {
+    margin-top: 65px;
+    /* Додаткові стилі для блоку контактів, референцій і освіти */
+}
+
+/* Стиль для фотографії */
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 500px 500px 500px 0 ; /* Округлення лише одного кута */
+    border: 8px solid white; /* Білий бордер */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додаємо тінь */
+    position: relative;
+    z-index: 1; /* Щоб фото було поверх трикутника */
+    margin-left: 38px;
+}
+
+

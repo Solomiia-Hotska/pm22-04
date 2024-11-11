@@ -9,74 +9,93 @@
     <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container-fluid">
         <div class="row">
             
-            <!-- Sidebar -->
-<div class="col-lg-5 col-md-5 sidebar">
-    <div class="photo-container mb-4">
-        <img src="/images/Boss.jpeg" alt="Boss" class="profile-photo">
-    </div>
-    <div class="contact mb-4">
-        <h3><i class="fas fa-user"></i> CONTACT ME</h3>
-        <div class="phone-container">
-            <i class="fas fa-phone"></i>
-            <div class="phone-numbers">
-                <a href="tel:+1-718-310-5588">+1-718-310-5588</a>
-                <a href="tel:+1-313-381-8167">+1-313-381-8167</a>
+           <!-- Sidebar -->
+            
+
+            <div class="col-3 p-0">
+                <div class="sidebar">
+                    <div class="line"></div> <!-- Одна суцільна лінія -->
+                    <div class="photo-container mb-4">
+                        <img src="/images/Boss.jpeg" alt="Boss" class="profile-photo">
+                    </div>
+                    <div class="contact mb-4">
+                        <h3><i class="fas fa-user"></i> CONTACT ME</h3>
+                        <div class="phone-container">
+                            <i class="fas fa-phone"></i>
+                            <div class="phone-numbers">
+                                <a href="tel:+1-718-310-5588">+1-718-310-5588</a>
+                                <a href="tel:+1-313-381-8167">+1-313-381-8167</a>
+                            </div>
+                        </div>
+                        <div class="email-container">
+                            <i class="fas fa-globe"></i>
+                            <div class="emails">
+                                <a href="mailto:yourinfo@email.com">yourinfo@email.com</a>
+                                <a href="mailto:info@website.com">info@website.com</a>
+                            </div>
+                        </div>
+                        <p><i class="fas fa-map-marker-alt"></i> 769 Prudence Street, Lincoln Park, MI 48146</p>
+                    </div>
+                    - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                    <div class="references mb-4">
+                        <div class="references">
+                            <div class="dot dot1"></div> <!-- Перша крапка -->
+                            <div class="dot dot2"></div> 
+                            <div class="dot dot3"></div> 
+                            <div class="dot dot4"></div> 
+                            <div class="dot dot5"></div> 
+                            <div class="dot dot6"></div> 
+                            <div class="dot dot7"></div> 
+                        </div> 
+                        <h3><i class="fas fa-user-friends"></i> REFERENCES</h3>
+                        <div>
+                            <div class="reference-text"></div>
+                            <strong>Darwin B. Magana</strong>
+                            <p>2813 Shobe Lane Mancos, CO.</p>
+                            <p>Tel: <a href="tel:+1-970-533-3393">+1-970-533-3393</a></p>
+                            <p>Email: <a href="http://www.yourwebsite.com">www.yourwebsite.com</a></p>
+                        </div>
+                        <div>
+                            <strong>Robert J. Belvin</strong>
+                            <p>2119 Fairfax Drive Newark, NJ.</p>
+                            <p>Tel: <a href="tel:+1-908-987-5103">+1-908-987-5103</a></p>
+                            <p>Email: <a href="http://www.yourwebsite.com">www.yourwebsite.com</a></p>
+                        </div>
+                    </div>
+                    - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+                    <div class="education">
+                        <h3><i class="fas fa-graduation-cap"></i> EDUCATION</h3>
+                        <div>
+                            <div class="education-text"></div>
+                            <strong>STANFORD UNIVERSITY</strong>
+                            <p>Master Degree Graduate</p>
+                            <p>2011-2013</p>
+                        </div>
+                        <div>
+                            <strong>UNIVERSITY OF CHICAGO</strong>
+                            <p>Bachelor Degree Graduate</p>
+                            <p>2007-2010</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="email-container">
-            <i class="fas fa-globe"></i>
-            <div class="emails">
-                <a href="mailto:yourinfo@email.com">yourinfo@email.com</a>
-                <a href="mailto:info@website.com">info@website.com</a>
-            </div>
-        </div>
-        <p><i class="fas fa-map-marker-alt"></i> 769 Prudence Street, Lincoln Park, MI 48146</p>
-    </div>
-    <div class="references mb-4">
-        <h3><i class="fas fa-user-friends"></i> REFERENCES</h3>
-        <div>
-            <strong>Darwin B. Magana</strong>
-            <p>2813 Shobe Lane Mancos, CO.</p>
-            <p>Tel: <a href="tel:+1-970-533-3393">+1-970-533-3393</a></p>
-            <p>Email: <a href="http://www.yourwebsite.com">www.yourwebsite.com</a></p>
-        </div>
-        <div>
-            <strong>Robert J. Belvin</strong>
-            <p>2119 Fairfax Drive Newark, NJ.</p>
-            <p>Tel: <a href="tel:+1-908-987-5103">+1-908-987-5103</a></p>
-            <p>Email: <a href="http://www.yourwebsite.com">www.yourwebsite.com</a></p>
-        </div>
-    </div>
-    <div class="education">
-        <h3><i class="fas fa-graduation-cap"></i> EDUCATION</h3>
-        <div>
-            <strong>STANFORD UNIVERSITY</strong>
-            <p>Master Degree Graduate</p>
-            <p>2011-2013</p>
-        </div>
-        <div>
-            <strong>UNIVERSITY OF CHICAGO</strong>
-            <p>Bachelor Degree Graduate</p>
-            <p>2007-2010</p>
-        </div>
-    </div>
-</div>
+
             <!-- Main content -->
-            <div class="col-lg-7 col-md-7 main-content">
-                <div class="text-container mb-4">
+            <div class="col-7 main-content p-0">  <!-- задати клас падінг 0 розділити кольори і про міксіни не забути-->
+                <div class="text-container">
                     <div class="rectangle-background"></div>
                     <h1><span class="first-name">BRIAN R.</span> <span class="last-name">BAXTER</span></h1>
                     <h2>Graphic & Web Designer</h2>
                 </div>
-                <div class="about-me mb-4">
+                <div class="about-me mb-4" style="padding: 15px;">
                     <h3><span class="yellow-circle"><i class="fas fa-graduation-cap"></i></span> ABOUT ME</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                 </div>
 
-                <div class="job-experience mb-4">
+                <div class="job-experience mb-4" style="padding: 15px;">
                     <h3><span class="yellow-circle"><i class="fas fa-briefcase"></i></span> JOB EXPERIENCE</h3>
                     <div class="job mb-3">
                         <h4>Senior Web Designer</h4>
@@ -100,7 +119,7 @@
 
                
                
-                <div class="skills">
+                <div class="skills mb-4" style="padding: 15px;">
                     <h3><span class="yellow-circle"><i class="fas fa-chart-pie skills-icon"></i></span> SKILLS</h3>
                     
                     <div class="progress-container">
@@ -126,7 +145,7 @@
                         </div>
                     </div>
                 </div>
-                </div>
+                
             </div>
         </div>
     </div>

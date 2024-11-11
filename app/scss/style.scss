@@ -13,11 +13,11 @@ body {
 
 /* Ліва колонка (сайдбар) */
 .sidebar {
-   position: relative;
+//    position: relative;
     background-color: #333; /* Темно-сірий фон */
-    padding: 20px;
+    padding: 50px;
     color: white; /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
-    width: 320px;
+    // width: 320px;
 }
 
 
@@ -71,9 +71,16 @@ body {
     align-items: center;
     gap: 10px;
     margin: 0; /* Прибрати стандартні відступи */
+
   }
+  .references .reference-text {
+    margin-top: 20px;  /* Відступ між заголовком і текстом під ним */
+}
+  
+
   .references h3 i {
     font-size: 0.7em; /* Розмір іконки відповідно до тексту */
+    
   }
   
   .education h3 {
@@ -87,7 +94,9 @@ body {
     gap: 10px;
     margin: 0; /* Прибрати стандартні відступи */
   }
-  
+  .education .education-text {
+    margin-top: 20px;  /* Відступ між заголовком і текстом під ним */
+}
   
   
   
@@ -328,13 +337,13 @@ body {
 
 
 .text-container {
-    position: relative; /* Встановлюємо позицію контейнера */
+    // position: relative; /* Встановлюємо позицію контейнера */
     display: block; /* Зробимо контейнер для тексту компактним */
     padding: 15px; /* Внутрішні відступи всередині прямокутника */
     background-color: #f0f0f0; /* Фон */
     margin: 10px 0; /* Відступи зовні */
-    width: calc(152% - 320px); /* Зменшуємо ширину, щоб дотягнути до сайдбару (320px — ширина сайдбару) */
-    float: right; /* Вирівнюємо правий край */
+    // width: calc(152% - 320px); /* Зменшуємо ширину, щоб дотягнути до сайдбару (320px — ширина сайдбару) */
+    // float: right; /* Вирівнюємо правий край */
 }
 
 .rectangle-background {
@@ -343,14 +352,14 @@ body {
     left: 0;
     right: 0;
     bottom: 0; /* Займає всю площу контейнера */
-    background-color: rgba(242, 171, 1, 0.5); /* Жовтий з прозорістю */
+    background-color: #f2ab01(242, 171, 1, 0.5); /* Жовтий з прозорістю */
     z-index: -1; /* Поміщаємо його за текстом */
 }
 
 /* Контейнер для фотографії */
 .photo-container {
     position: relative; /* Відносне позиціонування для розміщення елементів всередині */
-    width: 200px; /* Ширина фото */
+    width: 202px; /* Ширина фото */
     height: 200px; /* Висота фото */
 }
 
@@ -358,12 +367,12 @@ body {
 .photo-container::before {
     content: "";
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: -50px;
+    left: -50px;
     width: 0;
     height: 0;
     border-top: 300px solid #f2ab01; /* Жовтий трикутник */
-    border-right: 320px solid transparent;
+    border-right: 360px solid transparent;
     z-index: 0; /* Залишається позаду фотографії */
 }
 
@@ -374,14 +383,143 @@ body {
 
 /* Стиль для фотографії */
 .profile-photo {
-    width: 100%;
+    width: 105%;
     height: auto;
     border-radius: 500px 500px 500px 0 ; /* Округлення лише одного кута */
     border: 8px solid white; /* Білий бордер */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додаємо тінь */
     position: relative;
     z-index: 1; /* Щоб фото було поверх трикутника */
-    margin-left: 38px;
+    margin-left: 15px;
+    margin-top: -24px;
+}
+
+
+/* Стилі для секцій із лінією */
+.section {
+    position: relative;
+    padding-left: 40px; /* Простір для лінії ліворуч від контенту */
+}
+
+/* Вертикальна лінія */
+.line {
+    position: absolute;
+    left: 30px; /* Розміщення лінії ліворуч */
+    top: 0;
+    bottom: 0;
+    height: 1386px;
+    width: 2px;
+    background-color: #666666; /* Колір лінії */
+}
+
+/* Жовті крапочки */
+.line::before,
+.line::after {
+    content: '';
+    position: absolute;
+    left: -5px; /* Центр крапочки відносно лінії */
+    width: 12px;
+    height: 12px;
+    background-color: #f2ab01; /* Жовтий колір крапочки */
+    border-radius: 50%;
+}
+
+/* Крапочки поруч з кожною секцією */
+
+
+.contact::before,
+.references::before,
+.education::before {
+    content: '';
+    position: absolute;
+    left: 14px; /* Розташування крапочки поруч з лінією */
+    width: 12px;
+    height: 12px;
+    background-color: #f2ab01; /* Жовтий колір крапочки */
+    border-radius: 50%;
+}
+
+/* Позиціювання крапочок для кожної секції */
+.contact::before {
+    content: ''; /* Необхідно для псевдоелемента */
+    position: absolute;
+    top: 313px; /* Позиція по вертикалі */
+    left: 26px; /* Зміщення вліво */
+    width: 10px; /* Ширина прямокутника (тепер це товщина) */
+    height: 35px; /* Висота прямокутника (тепер це довжина) */
+    background-color: #f2ab01; /* Колір прямокутника */
+    border-radius: 5px; /* Заокруглення кутів */
+}
+
+
+
+.references::before {
+    top: -275px; /* Встанови позицію для секції "References" */
+    left: -25px;
+
+
+
+}
+
+
+.education::before {
+    top: 435px; /* Встанови позицію для секції "Education" */
+    left: 25px;
+}
+
+
+.references {
+    position: relative;
+}
+
+ .dot {
+    position: absolute;
+    width: 10px;
+    height: 35px;
+    background-color:  #f2ab01;
+    border-radius: 5px; /* Щоб крапка була круглою */
+    left: -24px;
+    top: -1px;
+}
+
+.dot2 {
+    top: 55px;
+    left: -24px;
+    width: 11px;
+    height: 11px;    /* robert   */
+}
+.dot3 {    /*education*/
+    top: 435px;
+    left: -24px;
+    
+}
+
+.dot4 {
+    top: 200px;
+    left: -24px;
+    width: 11px;
+    height: 11px;
+}
+
+.dot5 {
+    top: -156px;
+    left: -24px;
+    width: 11px;
+    height: 11px;
+    
+}
+
+.dot6 {
+    top: 490px;
+    left: -24px;
+    width: 11px;
+    height: 11px;
+}
+.dot7 {
+    top: 595px;
+    left: -24px;
+    width: 11px;
+    height: 11px;
 }
 
 

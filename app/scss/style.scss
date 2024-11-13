@@ -1,7 +1,7 @@
 /* Загальний стиль */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: var(--color-dark-gray);
     margin: 0;
     padding: 0;
 }
@@ -11,19 +11,56 @@ body {
     margin: 0 auto;
 }
 
-/* Ліва колонка (сайдбар) */
-.sidebar {
-//    position: relative;
-    background-color: #333; /* Темно-сірий фон */
-    padding: 50px;
-    color: white; /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
-    // width: 320px;
+/* Mixins */
+@mixin section-heading($font-size: 1.5em, $color: var(--color-white)) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: $font-size;
+    text-transform: uppercase;
+    color: $color;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+@mixin circular-icon($bg-color: var(--color-white), $icon-color: var(--color-dark-gray), $size: 30px) {
+    background-color: $bg-color;
+    color: $icon-color;
+    border-radius: 50%;
+    padding: 8px;
+    width: $size;
+    height: $size;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+@mixin progress-bar($bg-color: var(--color-yellow), $height: 10px, $radius: 5px) {
+    background-color: $bg-color;
+    height: $height;
+    border-radius: $radius;
+}
+
+@mixin yellow-dot($size: 12px, $bg-color: var(--color-yellow), $position: absolute) {
+    content: '';
+    position: $position;
+    width: $size;
+    height: $size;
+    background-color: $bg-color;
+    border-radius: 50%;
 }
 
 
+/* сайдбар */
+.sidebar {
 
-
-
+    background-color: var(--color-dark-gray); /* Темно-сірий фон */
+    padding: 50px;
+    color: var(--color-white); /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
+   
+}
 
 .section {
   margin-bottom: 20px;
@@ -44,21 +81,21 @@ body {
   text-indent: 10px; /* Відступ для тексту */
 }
 
-.contact h3 {
-    font-family: 'Montserrat', sans-serif; /* Застосовує шрифт Montserrat */
-    font-weight: 700; /* Жирність шрифту */
-    font-size: 1.5em; /* Розмір шрифту */
-    text-transform: uppercase; /* Великі літери */
-    color: #FFFFFF; /* Білий колір для тексту */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0; /* Прибрати стандартні відступи */
-  }
+// .contact h3 {
+//     font-family: 'Montserrat', sans-serif; /* Застосовує шрифт Montserrat */
+//     font-weight: 700; /* Жирність шрифту */
+//     font-size: 1.5em; /* Розмір шрифту */
+//     text-transform: uppercase; /* Великі літери */
+//     color: var(--color-white); /* Білий колір для тексту */
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+//     margin: 0; /* Прибрати стандартні відступи */
+//   }
   
-  .contact h3 i {
-    font-size: 0.8em; /* Розмір іконки відповідно до тексту */
-  }
+//   .contact h3 i {
+//     font-size: 0.8em; /* Розмір іконки відповідно до тексту */
+//   }
 
 
 .references h3 {
@@ -66,7 +103,7 @@ body {
     font-weight: 700; /* Жирність шрифту */
     font-size: 1.5em; /* Розмір шрифту */
     text-transform: uppercase; /* Великі літери */
-    color: #FFFFFF; /* Білий колір для тексту */
+    color: var(--color-white); /* Білий колір для тексту */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -88,7 +125,7 @@ body {
     font-weight: 700; /* Жирність шрифту */
     font-size: 1.5em; /* Розмір шрифту */
     text-transform: uppercase; /* Великі літери */
-    color: #FFFFFF; /* Білий колір для тексту */
+    color: var(--color-white); /* Білий колір для тексту */
     display: flex;
     align-items: center;
     gap: 10px;
@@ -113,10 +150,10 @@ body {
 
 
 
-.icon {
-  margin-right: 10px; /* Відступ іконок від тексту */
-  color: #FFD700; /* Колір іконок */
-}
+// .icon {
+//   margin-right: 10px; /* Відступ іконок від тексту */
+//   color: var(--color-yellow); /* Колір іконок */
+// }
 
 /* Лінії, що розділяють секції */
 .section-divider {
@@ -130,8 +167,8 @@ body {
 
 /* Зробити іконки круглими з жовтим фоном */
 .sidebar i {
-    background-color: white; /* Жовтий колір */
-    color: #333; /* Колір іконки */
+    background-color: var(--color-white); /* Жовтий колір */
+    color:  var(--color-dark-gray); /* Колір іконки */
     border-radius: 50%; /* Круглий фон */
     padding: 8px; /* Внутрішній відступ для розміру кола */
     margin-right: 10px; /* Відступ праворуч */
@@ -148,61 +185,60 @@ body {
 .sidebar p, 
 .sidebar strong, 
 .sidebar a {
-    color: white; /* Білий колір тексту для заголовків, параграфів та посилань у боковій панелі */
+    color:var(--color-white); /* Білий колір тексту для заголовків, параграфів та посилань у боковій панелі */
 }
 
 .sidebar i {
-    color: #333; /* Білий колір іконок у боковій панелі */
+    color: var(--color-dark-gray); /* Білий колір іконок у боковій панелі */
 }
 
-/* Права колонка (основний контент) */
+/* main content */
 .main-content {
-    background-color: #fff; /* Білий фон */
-    padding: 20px;
-    color: #333; /* Чорний колір тексту для основного контенту */
-    overflow: hidden;
+    background-color: var(--color-white); 
+    color: var(--color-dark-gray); 
+   
+   
 }
 .main-content {
-    margin-top: 50px; /* Змінюйте значення за потребою */
+    margin-top: 50px; 
 }
 
 /* Заголовки в основному контенті */
 .main-content h1 {
     font-size: 48px;
     text-transform: uppercase;
-     /* Чорний колір для заголовка H1 у основному контенті color: #333; */
     font-weight: 800;
     font-family: "Raleway", sans-serif;
 
     .first-name {
-        color: #333; /* Чорний колір для BRIAN R. */
+        color:var(--color-dark-gray); /* Чорний колір для BRIAN R. */
     }
     
     .last-name {
-        color: #f2ab01; /* Жовтий колір для BAXTER */
+        color:var(--color-yellow); /* Жовтий колір для BAXTER */
     }
 
 }
 
 .main-content h2 {
-    color: #333; /* Чорний колір для заголовка H2 */
+    color: var(--color-dark-gray); /* Чорний колір для заголовка H2 */
     font-size: 24px;
 }
 
 .main-content h3 {
-    color: #333; /* Чорний колір для заголовка H3 */
+    color: var(--color-dark-gray); /* Чорний колір для заголовка H3 */
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 .main-content h4 {
-    color: #333; /* Чорний колір для заголовка H4 */
+    color: var(--color-dark-gray); /* Чорний колір для заголовка H4 */
     margin-top: 20px;
 }
 
 .main-content p {
     line-height: 1.5;
-    color: #333; /* Чорний колір для тексту параграфів в основному контенті */
+    color:var(--color-dark-gray); /* Чорний колір для тексту параграфів в основному контенті */
 }
 
 .skills-icon {
@@ -211,11 +247,8 @@ body {
 }
 
 
-
-
-
 .yellow-circle {
-    background-color: #f2ab01; /* Жовтий колір фону */
+    background-color: var(--color-yellow); /* Жовтий колір фону */
     border-radius: 50%; /* Кругла форма */
     padding: 10px;
     display: inline-flex;
@@ -227,15 +260,14 @@ body {
 }
 
 .yellow-circle i {
-    color: #333; /* Чорний колір для самої іконки */
+    color: var(--color-dark-gray); /* Чорний колір для самої іконки */
     font-size: 23px; /* Розмір іконки */
 }
 
 
-
 /* Секція контактів */
 .contact i, .references i, .education i {
-    color: #333; /* Білий колір іконок у секціях контактів */
+    color: var(--color-dark-gray); /* Білий колір іконок у секціях контактів */
 }
 
 /* Стиль для навичок */
@@ -256,11 +288,11 @@ body {
     flex: 1;
     font-weight: bold;
     font-size: 14px;
-    color: #333; /* Колір тексту */
+    color: var(--color-dark-gray); /* Колір тексту */
 }
 
 .progress-bar {
-    background-color: #f2ab01; /* Яскраво-жовтий колір для заповнення прогресу */
+    background-color: var(--color-yellow); /* Яскраво-жовтий колір для заповнення прогресу */
     height: 10px;
     border-radius: 5px; /* Заокруглення країв */
     flex: 1;
@@ -277,8 +309,8 @@ body {
 .phone-container .fa-phone {
     margin-right: 10px; /* Відстань між іконкою і номерами */
     font-size: 16px;
-    background-color: white;
-    color: #333;
+    background-color: var(--color-white);
+    color: var(--color-dark-gray);
     border-radius: 50%;
     padding: 8px;
     width: 30px;
@@ -294,21 +326,10 @@ body {
 }
 
 .phone-numbers a {
-    color: white; /* Білий текст для посилань у боковій панелі */
+    color: var(--color-white); /* Білий текст для посилань у боковій панелі */
     text-decoration: none;
     margin-bottom: 5px; /* Відстань між номерами */
 }
-
-.phone-numbers a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
 
 
 
@@ -328,33 +349,28 @@ body {
 
 .contact .phone-numbers a,
 .contact .emails a {
-    color: white; /* або інший колір, який підходить */
+    color:var(--color-white); /* або інший колір, який підходить */
     text-decoration: none;
     margin: 2px 0;
 }
 
-
-
-
 .text-container {
-    // position: relative; /* Встановлюємо позицію контейнера */
     display: block; /* Зробимо контейнер для тексту компактним */
-    padding: 15px; /* Внутрішні відступи всередині прямокутника */
+    padding: 35px; /* Внутрішні відступи всередині прямокутника */
     background-color: #f0f0f0; /* Фон */
     margin: 10px 0; /* Відступи зовні */
-    // width: calc(152% - 320px); /* Зменшуємо ширину, щоб дотягнути до сайдбару (320px — ширина сайдбару) */
-    // float: right; /* Вирівнюємо правий край */
+    width: calc(100% + 240px); /* Збільшує ширину */
+    
+   }
+   .text-container h1 { /* або інший тег */
+    padding-left: 55px; /* Налаштування відступу для тексту */
 }
 
-.rectangle-background {
-    position: absolute; /* Встановлюємо позицію відносно text-container */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; /* Займає всю площу контейнера */
-    background-color: #f2ab01(242, 171, 1, 0.5); /* Жовтий з прозорістю */
-    z-index: -1; /* Поміщаємо його за текстом */
+.text-container h2 { /* або інший тег */
+    padding-left: 55px; /* Налаштування відступу для тексту */
 }
+
+
 
 /* Контейнер для фотографії */
 .photo-container {
@@ -371,7 +387,7 @@ body {
     left: -50px;
     width: 0;
     height: 0;
-    border-top: 300px solid #f2ab01; /* Жовтий трикутник */
+    border-top: 300px solid var(--color-yellow); /* Жовтий трикутник */
     border-right: 360px solid transparent;
     z-index: 0; /* Залишається позаду фотографії */
 }
@@ -386,8 +402,7 @@ body {
     width: 105%;
     height: auto;
     border-radius: 500px 500px 500px 0 ; /* Округлення лише одного кута */
-    border: 8px solid white; /* Білий бордер */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Додаємо тінь */
+    border: 8px solid var(--color-white); /* Білий бордер */
     position: relative;
     z-index: 1; /* Щоб фото було поверх трикутника */
     margin-left: 15px;
@@ -409,7 +424,7 @@ body {
     bottom: 0;
     height: 1386px;
     width: 2px;
-    background-color: #666666; /* Колір лінії */
+    background-color: var(--color-light-gray); /* Колір лінії */
 }
 
 /* Жовті крапочки */
@@ -420,13 +435,11 @@ body {
     left: -5px; /* Центр крапочки відносно лінії */
     width: 12px;
     height: 12px;
-    background-color: #f2ab01; /* Жовтий колір крапочки */
+    background-color:var(--color-yellow); /* Жовтий колір крапочки */
     border-radius: 50%;
 }
 
 /* Крапочки поруч з кожною секцією */
-
-
 .contact::before,
 .references::before,
 .education::before {
@@ -435,7 +448,7 @@ body {
     left: 14px; /* Розташування крапочки поруч з лінією */
     width: 12px;
     height: 12px;
-    background-color: #f2ab01; /* Жовтий колір крапочки */
+    background-color: var(--color-yellow); /* Жовтий колір крапочки */
     border-radius: 50%;
 }
 
@@ -447,18 +460,14 @@ body {
     left: 26px; /* Зміщення вліво */
     width: 10px; /* Ширина прямокутника (тепер це товщина) */
     height: 35px; /* Висота прямокутника (тепер це довжина) */
-    background-color: #f2ab01; /* Колір прямокутника */
+    background-color:var(--color-yellow); /* Колір прямокутника */
     border-radius: 5px; /* Заокруглення кутів */
 }
-
 
 
 .references::before {
     top: -275px; /* Встанови позицію для секції "References" */
     left: -25px;
-
-
-
 }
 
 
@@ -476,7 +485,7 @@ body {
     position: absolute;
     width: 10px;
     height: 35px;
-    background-color:  #f2ab01;
+    background-color:  var(--color-yellow);
     border-radius: 5px; /* Щоб крапка була круглою */
     left: -24px;
     top: -1px;
@@ -523,3 +532,18 @@ body {
 }
 
 
+.skills {
+    margin-top: 20px; 
+    margin-left: 80px;
+}
+
+
+.job-experience {
+    margin-top: 30px; 
+    margin-left: 80px;
+}
+
+.about-me {
+    margin-top: 60px; 
+    margin-left: 80px;
+}

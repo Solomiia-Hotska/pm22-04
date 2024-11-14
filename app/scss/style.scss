@@ -481,7 +481,7 @@ body {
     position: relative;
 }
 
- .dot {
+.sidebar .dot {
     position: absolute;
     width: 10px;
     height: 35px;
@@ -489,28 +489,27 @@ body {
     border-radius: 5px; /* Щоб крапка була круглою */
     left: -24px;
     top: -1px;
-}
-
-.dot2 {
+} 
+.sidebar .dot2 {
     top: 55px;
     left: -24px;
     width: 11px;
     height: 11px;    /* robert   */
 }
-.dot3 {    /*education*/
+.sidebar .dot3 {    /*education*/
     top: 435px;
     left: -24px;
     
 }
 
-.dot4 {
+.sidebar .dot4 {
     top: 200px;
     left: -24px;
     width: 11px;
     height: 11px;
 }
 
-.dot5 {
+.sidebar .dot5 {
     top: -156px;
     left: -24px;
     width: 11px;
@@ -518,18 +517,74 @@ body {
     
 }
 
-.dot6 {
+.sidebar .dot6 {
     top: 490px;
     left: -24px;
     width: 11px;
     height: 11px;
 }
-.dot7 {
+.sidebar .dot7 { //uni of chicago
     top: 595px;
     left: -24px;
     width: 11px;
     height: 11px;
 }
+
+
+
+.main-content .dot {
+    position: absolute;
+    width: 10px;
+    height: 35px;
+    background-color:  var(--color-yellow);
+    border-radius: 5px; /* Щоб крапка була круглою */
+    left: 36px;
+    top: 39px;
+}
+
+
+.main-content .dot10 { //marketing manager
+    top: 894px;
+    left: 35px;
+    width: 11px;
+    height: 11px;
+}
+.main-content .dot11 { //about me
+    top: 258px; 
+    left: 36px;
+}
+
+.main-content .dot12 { //senior web
+    top: 525px;
+    left: 36px;
+    width: 11px;
+    height: 11px;
+}
+.main-content .dot13 {     //skills
+    top: 1124px;
+    left: 36px;
+   
+}
+
+.main-content .dot14 { //graphic designer
+    top: 710px;
+    left: 36px;
+    width: 11px;
+    height: 11px;
+}
+.main-content .dot15 { //job experience
+    top: 456px;
+    left: 36px;
+
+}
+.main-content .dot16 { //job experience
+    top: 65px;
+    left: 36px;
+    height: 85px;
+
+}
+
+
 
 
 .skills {
@@ -547,3 +602,23 @@ body {
     margin-top: 60px; 
     margin-left: 80px;
 }
+
+
+
+.main-content {
+    position: relative; /* Встановлюємо позицію для main-content */
+    padding-left: 50px; /* Простір для лінії */
+}
+
+/* Додаємо вертикальну лінію */
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: -55px;
+    left: 40px; /* Позиція лінії зліва */
+    width: 2px; /* Ширина лінії */
+    height: 104%; /* Висота лінії */
+    background-color: var(--color-dark-gray); /* Колір лінії */
+}
+
+

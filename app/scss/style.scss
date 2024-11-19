@@ -5,11 +5,7 @@ body {
     margin: 0;
     padding: 0;
 }
-//.title1 {
-    // font-family: 'Raleway' ; 
-    // font-size: 1rem; 
-    // font-weight: 200; 
-    // color: #333; 
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -125,7 +121,7 @@ font-family: 'Raleway';
 }
   
 .references a{
-    
+
 }
   .references h3 i {
     font-size: 0.7em; /* Розмір іконки відповідно до тексту */
@@ -192,18 +188,6 @@ font-family: 'Raleway';
     justify-content: center;
 }
 
-/* Заголовки та текст в боковій панелі */
-// .sidebar h3, 
-// .sidebar p, 
-// .sidebar strong, 
-// .sidebar a {
-//     color:var(--color-white); /* Білий колір тексту для заголовків, параграфів та посилань у боковій панелі */
-//     font-family: 'Raleway';
-//     font-weight: 700;
-//     p{
-//         font-weight: 400;  
-//     }
-// }
 
 .sidebar i {
     color: var(--color-dark-gray); /* Білий колір іконок у боковій панелі */
@@ -216,15 +200,11 @@ font-family: 'Raleway';
     margin-top: 50px; 
    
 }
-// .main-content {
-   
-// }
 
 /* Заголовки в основному контенті */
 .main-content h1 {
     font-size: 48px;
     text-transform: uppercase;
-    //font-weight: 700;
     font-family: "Raleway", sans-serif;
 
     .first-name {
@@ -575,18 +555,18 @@ font-family: 'Raleway';
 
 
 .main-content .dot10 { //marketing manager
-    top: 894px;
+    top: 890px;
     left: 35px;
     width: 11px;
     height: 11px;
 }
 .main-content .dot11 { //about me
-    top: 258px; 
+    top: 257px; 
     left: 36px;
 }
 
 .main-content .dot12 { //senior web
-    top: 525px;
+    top: 520px;
     left: 36px;
     width: 11px;
     height: 11px;
@@ -598,7 +578,7 @@ font-family: 'Raleway';
 }
 
 .main-content .dot14 { //graphic designer
-    top: 710px;
+    top: 705px;
     left: 36px;
     width: 11px;
     height: 11px;
@@ -674,7 +654,7 @@ font-family: 'Raleway';
   .skill-name {
     width: 80px; /* Ширина для вирівнювання з прогрес-баром */
     white-space: nowrap;
-    margin-right: 78px;
+    margin-right: 90px;
     font-family: 'Raleway';
     font-weight: 600;
   }

@@ -1,6 +1,5 @@
 /* Загальний стиль */
 body {
-    //font-family: Arial, sans-serif;
     color: var(--color-dark-gray);
     margin: 0;
     padding: 0;
@@ -87,21 +86,6 @@ font-family: 'Raleway';
   text-indent: 10px; /* Відступ для тексту */
 }
 
-// .contact h3 {
-//     font-family: 'Montserrat', sans-serif; /* Застосовує шрифт Montserrat */
-//     font-weight: 700; /* Жирність шрифту */
-//     font-size: 1.5em; /* Розмір шрифту */
-//     text-transform: uppercase; /* Великі літери */
-//     color: var(--color-white); /* Білий колір для тексту */
-//     display: flex;
-//     align-items: center;
-//     gap: 10px;
-//     margin: 0; /* Прибрати стандартні відступи */
-//   }
-  
-//   .contact h3 i {
-//     font-size: 0.8em; /* Розмір іконки відповідно до тексту */
-//   }
 
 
 .references h3 {
@@ -158,10 +142,7 @@ font-family: 'Raleway';
 
 
 
-// .icon {
-//   margin-right: 10px; /* Відступ іконок від тексту */
-//   color: var(--color-yellow); /* Колір іконок */
-// }
+
 
 /* Лінії, що розділяють секції */
 .section-divider {

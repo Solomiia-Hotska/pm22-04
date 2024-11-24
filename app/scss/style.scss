@@ -1,70 +1,82 @@
 /* Загальний стиль */
 body {
-    color: var(--color-dark-gray);
-    margin: 0;
-    padding: 0;
+  color: var(--color-dark-gray);
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Mixins */
 @mixin section-heading($font-size: 1.5em, $color: var(--color-white)) {
-    font-family: 'Raleway', sans-serif ; 
-    font-weight: 700;
-    font-size: $font-size;
-    text-transform: uppercase;
-    color: $color;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: $font-size;
+  text-transform: uppercase;
+  color: $color;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
 }
 
-@mixin circular-icon($bg-color: var(--color-white), $icon-color: var(--color-dark-gray), $size: 30px) {
-    background-color: $bg-color;
-    color: $icon-color;
-    border-radius: 50%;
-    padding: 8px;
-    width: $size;
-    height: $size;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
+@mixin circular-icon(
+  $bg-color: var(--color-white),
+  $icon-color: var(--color-dark-gray),
+  $size: 30px
+) {
+  background-color: $bg-color;
+  color: $icon-color;
+  border-radius: 50%;
+  padding: 8px;
+  width: $size;
+  height: $size;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
 
-@mixin progress-bar($bg-color: var(--color-yellow), $height: 10px, $radius: 5px) {
-    background-color: $bg-color;
-    height: $height;
-    border-radius: $radius;
+@mixin progress-bar(
+  $bg-color: var(--color-yellow),
+  $height: 10px,
+  $radius: 5px
+) {
+  background-color: $bg-color;
+  height: $height;
+  border-radius: $radius;
 }
 
-@mixin yellow-dot($size: 12px, $bg-color: var(--color-yellow), $position: absolute) {
-    content: '';
-    position: $position;
-    width: $size;
-    height: $size;
-    background-color: $bg-color;
-    border-radius: 50%;
+@mixin yellow-dot(
+  $size: 12px,
+  $bg-color: var(--color-yellow),
+  $position: absolute
+) {
+  content: "";
+  position: $position;
+  width: $size;
+  height: $size;
+  background-color: $bg-color;
+  border-radius: 50%;
 }
-
 
 /* сайдбар */
 .sidebar {
-font-family: 'Raleway';
-    background-color: var(--color-dark-gray); /* Темно-сірий фон */
-    padding: 50px;
-    color: var(--color-white); /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
-   h3{
-    font-weight :700 ;
-   }
-   a{
+  font-family: "Raleway";
+  background-color: var(--color-dark-gray); /* Темно-сірий фон */
+  padding: 50px;
+  color: var(
+    --color-white
+  ); /* Змінює колір шрифта на білий для всіх елементів у боковій панелі */
+  h3 {
+    font-weight: 700;
+  }
+  a {
     color: var(--color-white);
-
-   }
+  }
 }
 
 .section {
@@ -86,63 +98,45 @@ font-family: 'Raleway';
   text-indent: 10px; /* Відступ для тексту */
 }
 
-
-
 .references h3 {
-    font-family: 'Raleway'; /* Застосовує шрифт Montserrat */
-    font-weight: 700; /* Жирність шрифту */
-    font-size: 1.5em; /* Розмір шрифту */
-    text-transform: uppercase; /* Великі літери */
-    color: var(--color-white); /* Білий колір для тексту */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0; /* Прибрати стандартні відступи */
-
-  }
-  .references .reference-text {
-    margin-top: 20px;  /* Відступ між заголовком і текстом під ним */
+  font-family: "Raleway"; /* Застосовує шрифт Montserrat */
+  font-weight: 700; /* Жирність шрифту */
+  font-size: 1.5em; /* Розмір шрифту */
+  text-transform: uppercase; /* Великі літери */
+  color: var(--color-white); /* Білий колір для тексту */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0; /* Прибрати стандартні відступи */
 }
-  
-.references a{
-
+.references .reference-text {
+  margin-top: 20px; /* Відступ між заголовком і текстом під ним */
 }
-  .references h3 i {
-    font-size: 0.7em; /* Розмір іконки відповідно до тексту */
-    
-  }
-  
-  .education h3 {
-    font-family: 'Montserrat', sans-serif; /* Застосовує шрифт Montserrat */
-    font-weight: 700; /* Жирність шрифту */
-    font-size: 1.5em; /* Розмір шрифту */
-    text-transform: uppercase; /* Великі літери */
-    color: var(--color-white); /* Білий колір для тексту */
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 0; /* Прибрати стандартні відступи */
-  }
-  .education .education-text {
-    margin-top: 20px;  /* Відступ між заголовком і текстом під ним */
+
+.references a {
 }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .education h3 i {
-    font-size: 0.7em; /* Розмір іконки відповідно до тексту */
-  }
+.references h3 i {
+  font-size: 0.7em; /* Розмір іконки відповідно до тексту */
+}
 
+.education h3 {
+  font-family: "Montserrat", sans-serif; /* Застосовує шрифт Montserrat */
+  font-weight: 700; /* Жирність шрифту */
+  font-size: 1.5em; /* Розмір шрифту */
+  text-transform: uppercase; /* Великі літери */
+  color: var(--color-white); /* Білий колір для тексту */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0; /* Прибрати стандартні відступи */
+}
+.education .education-text {
+  margin-top: 20px; /* Відступ між заголовком і текстом під ним */
+}
 
-
-
-
+.education h3 i {
+  font-size: 0.7em; /* Розмір іконки відповідно до тексту */
+}
 
 /* Лінії, що розділяють секції */
 .section-divider {
@@ -150,512 +144,557 @@ font-family: 'Raleway';
   margin: 15px 0;
 }
 
-
-
-
-
 /* Зробити іконки круглими з жовтим фоном */
 .sidebar i {
-    background-color: var(--color-white); /* Жовтий колір */
-    color:  var(--color-dark-gray); /* Колір іконки */
-    border-radius: 50%; /* Круглий фон */
-    padding: 8px; /* Внутрішній відступ для розміру кола */
-    margin-right: 10px; /* Відступ праворуч */
-    font-size: 14px; /* Розмір іконки */
-    width: 30px; /* Ширина та висота для кола */
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--color-white); /* Жовтий колір */
+  color: var(--color-dark-gray); /* Колір іконки */
+  border-radius: 50%; /* Круглий фон */
+  padding: 8px; /* Внутрішній відступ для розміру кола */
+  margin-right: 10px; /* Відступ праворуч */
+  font-size: 14px; /* Розмір іконки */
+  width: 30px; /* Ширина та висота для кола */
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .sidebar i {
-    color: var(--color-dark-gray); /* Білий колір іконок у боковій панелі */
+  color: var(--color-dark-gray); /* Білий колір іконок у боковій панелі */
 }
 
 /* main content */
 .main-content {
-    background-color: var(--color-white); 
-    color: var(--color-dark-gray); 
-    margin-top: 50px; 
-   
+  background-color: var(--color-white);
+  color: var(--color-dark-gray);
+  margin-top: 50px;
 }
 
 /* Заголовки в основному контенті */
 .main-content h1 {
-    font-size: 48px;
-    text-transform: uppercase;
-    font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
 
-    .first-name {
-        font-weight: 900;
-        color:var(--color-dark-gray); /* Чорний колір для BRIAN R. */
-    }
-    
-    .last-name {
-        font-weight: 900;
-        color:var(--color-yellow); /* Жовтий колір для BAXTER */
-    }
+  .first-name {
+    font-weight: 900;
+    color: var(--color-dark-gray); /* Чорний колір для BRIAN R. */
+  }
 
+  .last-name {
+    font-weight: 900;
+    color: var(--color-yellow); /* Жовтий колір для BAXTER */
+  }
 }
 
 .main-content h2 {
-    color: var(--color-dark-gray); /* Чорний колір для заголовка H2 */
-    font-size: 20px;
-    font-family: 'Raleway';
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
+  color: var(--color-dark-gray); /* Чорний колір для заголовка H2 */
+  font-size: 20px;
+  font-family: "Raleway";
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
 .main-content h3 {
-    color: var(--color-dark-gray); /* Чорний колір для заголовка H3 */
-    font-size: 25px;
-    margin-bottom: 10px;
-    font-family: 'Raleway';
-    font-weight: 700;
+  color: var(--color-dark-gray); /* Чорний колір для заголовка H3 */
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-family: "Raleway";
+  font-weight: 700;
 }
 
 .main-content h4 {
-    color: var(--color-dark-gray); /* Чорний колір для заголовка H4 */
-    margin-top: 20px;
-    font-family: 'Raleway';
-    font-weight:700;
-    text-transform: uppercase;
+  color: var(--color-dark-gray); /* Чорний колір для заголовка H4 */
+  margin-top: 20px;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .main-content p {
-    font-family: 'Raleway';
-    line-height: 1.5;
-    color:var(--color-dark-gray); /* Чорний колір для тексту параграфів в основному контенті */
+  font-family: "Raleway";
+  line-height: 1.5;
+  color: var(
+    --color-dark-gray
+  ); /* Чорний колір для тексту параграфів в основному контенті */
 }
 
 .skills-icon {
-    position: relative;
-    left: -1px; /* або інше значення для тонкого налаштування */
+  position: relative;
+  left: -1px; /* або інше значення для тонкого налаштування */
 }
 
-
 .yellow-circle {
-    background-color: var(--color-yellow); /* Жовтий колір фону */
-    border-radius: 50%; /* Кругла форма */
-    padding: 10px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px; /* Фіксована ширина */
-    height: 40px; /* Фіксована висота */
-    margin-right: 10px;
+  background-color: var(--color-yellow); /* Жовтий колір фону */
+  border-radius: 50%; /* Кругла форма */
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Фіксована ширина */
+  height: 40px; /* Фіксована висота */
+  margin-right: 10px;
 }
 
 .yellow-circle i {
-    color: var(--color-dark-gray); /* Чорний колір для самої іконки */
-    font-size: 23px; /* Розмір іконки */
+  color: var(--color-dark-gray); /* Чорний колір для самої іконки */
+  font-size: 23px; /* Розмір іконки */
 }
 
-
 /* Секція контактів */
-.contact i, .references i, .education i {
-    color: var(--color-dark-gray); /* Білий колір іконок у секціях контактів */
+.contact i,
+.references i,
+.education i {
+  color: var(--color-dark-gray); /* Білий колір іконок у секціях контактів */
 }
 
 /* Стиль для навичок */
 /* Контейнер для кожного повзунка */
 .progress-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Проміжок між прогрес-барами */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Проміжок між прогрес-барами */
 }
 
 .progress {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .progress-label {
-    flex: 1;
-    font-weight: bold;
-    font-size: 14px;
-    color: var(--color-dark-gray); /* Колір тексту */
+  flex: 1;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--color-dark-gray); /* Колір тексту */
 }
 
 .progress-bar {
-    background-color: var(--color-yellow); /* Яскраво-жовтий колір для заповнення прогресу */
-    height: 10px;
-    border-radius: 5px; /* Заокруглення країв */
-    flex: 1;
+  background-color: var(
+    --color-yellow
+  ); /* Яскраво-жовтий колір для заповнення прогресу */
+  height: 10px;
+  border-radius: 5px; /* Заокруглення країв */
+  flex: 1;
 }
-
 
 /* Контейнер для телефону */
 .phone-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .phone-container .fa-phone {
-    margin-right: 10px; /* Відстань між іконкою і номерами */
-    font-size: 16px;
-    background-color: var(--color-white);
-    color: var(--color-dark-gray);
-    border-radius: 50%;
-    padding: 8px;
-    width: 30px;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  margin-right: 10px; /* Відстань між іконкою і номерами */
+  font-size: 16px;
+  background-color: var(--color-white);
+  color: var(--color-dark-gray);
+  border-radius: 50%;
+  padding: 8px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .phone-numbers {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .phone-numbers a {
-    color: var(--color-white); /* Білий текст для посилань у боковій панелі */
-    text-decoration: none;
-    margin-bottom: 5px; /* Відстань між номерами */
+  color: var(--color-white); /* Білий текст для посилань у боковій панелі */
+  text-decoration: none;
+  margin-bottom: 5px; /* Відстань між номерами */
 }
-
-
 
 .contact .phone-container,
 .contact .email-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .contact .phone-numbers,
 .contact .emails {
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact .phone-numbers a,
 .contact .emails a {
-    color:var(--color-white); /* або інший колір, який підходить */
-    text-decoration: none;
-    margin: 2px 0;
+  color: var(--color-white); /* або інший колір, який підходить */
+  text-decoration: none;
+  margin: 2px 0;
 }
 
 .text-container {
-    display: block; /* Зробимо контейнер для тексту компактним */
-    padding: 35px; /* Внутрішні відступи всередині прямокутника */
-    background-color: #f0f0f0; /* Фон */
-    margin: 10px 0; /* Відступи зовні */
-    width: calc(100% + 240px); /* Збільшує ширину */
-    
-   }
-   .text-container h1 { /* або інший тег */
-    padding-left: 55px; /* Налаштування відступу для тексту */
+  display: block; /* Зробимо контейнер для тексту компактним */
+  padding: 35px; /* Внутрішні відступи всередині прямокутника */
+  background-color: #f0f0f0; /* Фон */
+  margin: 10px 0; /* Відступи зовні */
+  width: calc(100% + 240px); /* Збільшує ширину */
+}
+.text-container h1 {
+  /* або інший тег */
+  padding-left: 55px; /* Налаштування відступу для тексту */
 }
 
-.text-container h2 { /* або інший тег */
-    padding-left: 55px; /* Налаштування відступу для тексту */
+.text-container h2 {
+  /* або інший тег */
+  padding-left: 55px; /* Налаштування відступу для тексту */
 }
-
-
 
 /* Контейнер для фотографії */
 .photo-container {
-    position: relative; /* Відносне позиціонування для розміщення елементів всередині */
-    width: 202px; /* Ширина фото */
-    height: 200px; /* Висота фото */
+  position: relative; /* Відносне позиціонування для розміщення елементів всередині */
+  width: 202px; /* Ширина фото */
+  height: 200px; /* Висота фото */
 }
 
 /* Фон-трикутник позаду */
 .photo-container::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 0;
-    height: 0;
-    border-top: 300px solid var(--color-yellow); /* Жовтий трикутник */
-    border-right: 360px solid transparent;
-    z-index: 0; /* Залишається позаду фотографії */
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 0;
+  height: 0;
+  border-top: 300px solid var(--color-yellow); /* Жовтий трикутник */
+  border-right: 360px solid transparent;
+  z-index: 0; /* Залишається позаду фотографії */
 }
 
-.sidebar .contact, .sidebar .references, .sidebar .education {
-    margin-top: 65px;
-    /* Додаткові стилі для блоку контактів, референцій і освіти */
+.sidebar .contact,
+.sidebar .references,
+.sidebar .education {
+  margin-top: 65px;
+  /* Додаткові стилі для блоку контактів, референцій і освіти */
 }
 
 /* Стиль для фотографії */
 .profile-photo {
-    width: 105%;
-    height: auto;
-    border-radius: 500px 500px 500px 0 ; /* Округлення лише одного кута */
-    border: 8px solid var(--color-white); /* Білий бордер */
-    position: relative;
-    z-index: 1; /* Щоб фото було поверх трикутника */
-    margin-left: 15px;
-    margin-top: -24px;
+  width: 105%;
+  height: auto;
+  border-radius: 500px 500px 500px 0; /* Округлення лише одного кута */
+  border: 8px solid var(--color-white); /* Білий бордер */
+  position: relative;
+  z-index: 1; /* Щоб фото було поверх трикутника */
+  margin-left: 15px;
+  margin-top: -24px;
 }
-
 
 /* Стилі для секцій із лінією */
 .section {
-    position: relative;
-    padding-left: 40px; /* Простір для лінії ліворуч від контенту */
+  position: relative;
+  padding-left: 40px; /* Простір для лінії ліворуч від контенту */
 }
 
 /* Вертикальна лінія */
 .line {
-    position: absolute;
-    left: 30px; /* Розміщення лінії ліворуч */
-    top: 0;
-    bottom: 0;
-    height: 1400px;
-    width: 2px;
-    background-color: var(--color-light-gray); /* Колір лінії */
+  position: absolute;
+  left: 30px; /* Розміщення лінії ліворуч */
+  top: 0;
+  bottom: 0;
+  height: 1400px;
+  width: 2px;
+  background-color: var(--color-light-gray); /* Колір лінії */
 }
 
 /* Жовті крапочки */
 .line::before,
 .line::after {
-    content: '';
-    position: absolute;
-    left: -5px; /* Центр крапочки відносно лінії */
-    width: 12px;
-    height: 12px;
-    background-color:var(--color-yellow); /* Жовтий колір крапочки */
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: -5px; /* Центр крапочки відносно лінії */
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-yellow); /* Жовтий колір крапочки */
+  border-radius: 50%;
 }
 
 /* Крапочки поруч з кожною секцією */
 .contact::before,
 .references::before,
 .education::before {
-    content: '';
-    position: absolute;
-    left: 14px; /* Розташування крапочки поруч з лінією */
-    width: 12px;
-    height: 12px;
-    background-color: var(--color-yellow); /* Жовтий колір крапочки */
-    border-radius: 50%;
+  content: "";
+  position: absolute;
+  left: 14px; /* Розташування крапочки поруч з лінією */
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-yellow); /* Жовтий колір крапочки */
+  border-radius: 50%;
 }
 
 /* Позиціювання крапочок для кожної секції */
 .contact::before {
-    content: ''; /* Необхідно для псевдоелемента */
-    position: absolute;
-    top: 313px; /* Позиція по вертикалі */
-    left: 26px; /* Зміщення вліво */
-    width: 10px; /* Ширина прямокутника (тепер це товщина) */
-    height: 35px; /* Висота прямокутника (тепер це довжина) */
-    background-color:var(--color-yellow); /* Колір прямокутника */
-    border-radius: 5px; /* Заокруглення кутів */
+  content: ""; /* Необхідно для псевдоелемента */
+  position: absolute;
+  top: 313px; /* Позиція по вертикалі */
+  left: 26px; /* Зміщення вліво */
+  width: 10px; /* Ширина прямокутника (тепер це товщина) */
+  height: 35px; /* Висота прямокутника (тепер це довжина) */
+  background-color: var(--color-yellow); /* Колір прямокутника */
+  border-radius: 5px; /* Заокруглення кутів */
 }
-
 
 .references::before {
-    top: -275px; /* Встанови позицію для секції "References" */
-    left: -25px;
+  top: -275px; /* Встанови позицію для секції "References" */
+  left: -25px;
 }
-
 
 .education::before {
-    top: 435px; /* Встанови позицію для секції "Education" */
-    left: 25px;
+  top: 435px; /* Встанови позицію для секції "Education" */
+  left: 25px;
 }
 
-
 .references {
-    position: relative;
+  position: relative;
 }
 
 .sidebar .dot {
-    position: absolute;
-    width: 10px;
-    height: 35px;
-    background-color:  var(--color-yellow);
-    border-radius: 5px; /* Щоб крапка була круглою */
-    left: -24px;
-    top: -1px;
-} 
-
-
+  position: absolute;
+  width: 10px;
+  height: 35px;
+  background-color: var(--color-yellow);
+  border-radius: 5px; /* Щоб крапка була круглою */
+  left: -24px;
+  top: -1px;
+}
 
 .sidebar .dot2 {
-    top: 55px;
-    left: -24px;
-    width: 11px;
-    height: 11px;    /* robert   */
+  top: 55px;
+  left: -24px;
+  width: 11px;
+  height: 11px; /* robert   */
 }
-.sidebar .dot3 {    /*education*/
-    top: 435px;
-    left: -24px;
-    
+.sidebar .dot3 {
+  /*education*/
+  top: 435px;
+  left: -24px;
 }
 
 .sidebar .dot4 {
-    top: 200px;
-    left: -24px;
-    width: 11px;
-    height: 11px;
+  top: 200px;
+  left: -24px;
+  width: 11px;
+  height: 11px;
 }
 
 .sidebar .dot5 {
-    top: -156px;
-    left: -24px;
-    width: 11px;
-    height: 11px;
-    
+  top: -156px;
+  left: -24px;
+  width: 11px;
+  height: 11px;
 }
 
 .sidebar .dot6 {
-    top: 490px;
-    left: -24px;
-    width: 11px;
-    height: 11px;
+  top: 490px;
+  left: -24px;
+  width: 11px;
+  height: 11px;
 }
-.sidebar .dot7 { //uni of chicago
-    top: 595px;
-    left: -24px;
-    width: 11px;
-    height: 11px;
+.sidebar .dot7 {
+  //uni of chicago
+  top: 595px;
+  left: -24px;
+  width: 11px;
+  height: 11px;
 }
-
-
 
 .main-content .dot {
-    position: absolute;
-    width: 10px;
-    height: 35px;
-    background-color:  var(--color-yellow);
-    border-radius: 5px; /* Щоб крапка була круглою */
-    left: 36px;
-    top: 39px;
+  position: absolute;
+  width: 10px;
+  height: 35px;
+  background-color: var(--color-yellow);
+  border-radius: 5px; /* Щоб крапка була круглою */
+  left: 36px;
+  top: 39px;
 }
 
-
-.main-content .dot10 { //marketing manager
-    top: 890px;
-    left: 35px;
-    width: 11px;
-    height: 11px;
+.main-content .dot10 {
+  //marketing manager
+  top: 890px;
+  left: 35px;
+  width: 11px;
+  height: 11px;
 }
-.main-content .dot11 { //about me
-    top: 257px; 
-    left: 36px;
-}
-
-.main-content .dot12 { //senior web
-    top: 520px;
-    left: 36px;
-    width: 11px;
-    height: 11px;
-}
-.main-content .dot13 {     //skills
-    top: 1105px;
-    left: 36px;
-   
+.main-content .dot11 {
+  //about me
+  top: 257px;
+  left: 36px;
 }
 
-.main-content .dot14 { //graphic designer
-    top: 705px;
-    left: 36px;
-    width: 11px;
-    height: 11px;
+.main-content .dot12 {
+  //senior web
+  top: 520px;
+  left: 36px;
+  width: 11px;
+  height: 11px;
 }
-.main-content .dot15 { //job experience
-    top: 456px;
-    left: 36px;
-
-}
-.main-content .dot16 { //job experience
-    top: 65px;
-    left: 36px;
-    height: 85px;
-
+.main-content .dot13 {
+  //skills
+  top: 1105px;
+  left: 36px;
 }
 
-
-
+.main-content .dot14 {
+  //graphic designer
+  top: 705px;
+  left: 36px;
+  width: 11px;
+  height: 11px;
+}
+.main-content .dot15 {
+  //job experience
+  top: 456px;
+  left: 36px;
+}
+.main-content .dot16 {
+  //job experience
+  top: 65px;
+  left: 36px;
+  height: 85px;
+}
 
 .skills {
-    margin-top: 20px; 
-    margin-left: 80px;
+  margin-top: 28px;
+  margin-left: 80px;
 }
 
-
 .job-experience {
-    margin-top: 30px; 
-    margin-left: 80px;
+  margin-top: 30px;
+  margin-left: 80px;
 }
 
 .about-me {
-    margin-top: 60px; 
-    margin-left: 80px;
+  margin-top: 60px;
+  margin-left: 80px;
 }
 
-
-
 .main-content {
-    position: relative; /* Встановлюємо позицію для main-content */
-    padding-left: 50px; /* Простір для лінії */
+  position: relative; /* Встановлюємо позицію для main-content */
+  padding-left: 50px; /* Простір для лінії */
 }
 
 /* Додаємо вертикальну лінію */
 .main-content::before {
-    content: '';
-    position: absolute;
-    top: -55px;
-    left: 40px; /* Позиція лінії зліва */
-    width: 2px; /* Ширина лінії */
-    height: 104%; /* Висота лінії */
-    background-color: var(--color-dark-gray); /* Колір лінії */
+  content: "";
+  position: absolute;
+  top: -55px;
+  left: 40px; /* Позиція лінії зліва */
+  width: 2px; /* Ширина лінії */
+  height: 104%; /* Висота лінії */
+  background-color: var(--color-dark-gray); /* Колір лінії */
 }
 
-
-
 .skills-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Два стовпці */
-    gap: 40px;
-  }
-  
-  .skills-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .skill {
-    display: flex;
-    align-items: center;
-  }
-  
-  .skill-name {
-    width: 80px; /* Ширина для вирівнювання з прогрес-баром */
-    white-space: nowrap;
-    margin-right: 90px;
-    font-family: 'Raleway';
-    font-weight: 600;
-  }
-  
-  .progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  .progress {
-    height: 100%;
-    background-color: var(--color-yellow); /* Колір прогрес-бару */
-    border-radius: 5px;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Два стовпці */
+  gap: 40px;
+}
 
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
+.skill {
+  display: flex;
+  align-items: center;
+}
 
+.skill-name {
+  width: 80px; /* Ширина для вирівнювання з прогрес-баром */
+  white-space: nowrap;
+  margin-right: 90px;
+  font-family: "Raleway";
+  font-weight: 600;
+}
 
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
-  
+.progress {
+  height: 100%;
+  background-color: var(--color-yellow); /* Колір прогрес-бару */
+  border-radius: 5px;
+}
+
+.about-text {
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  max-height: 200px; /* Початковий розмір тексту */
+  overflow: hidden; /* Ховаємо текст, що виходить за межі */
+  opacity: 1;
+}
+
+.about-text.hidden {
+  max-height: 0; /* Ховаємо текст повністю */
+  opacity: 0; /* Робимо текст прозорим */
+  padding: 0; /* Забираємо зайві відступи */
+}
+
+/* Контейнер для прогрес-барів */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+/* Прогрес */
+.progress {
+  width: 0%; /* Початково ширина 0% */
+  height: 100%;
+  background-color: var(--color-yellow);
+  border-radius: 5px;
+  transition: width 2s ease-in-out; /* Плавна анімація */
+}
+
+#skills-text {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease;
+}
+
+#skills-text.expanded {
+  max-height: 500px; /* Підбери потрібну висоту */
+}
+/* Анімація прогрес-барів */
+.progress-bar {
+  background: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  height: 10px;
+  width: 100%;
+}
+
+.progress {
+  background: var(--color-yellow);
+  height: 100%;
+  width: 0; /* Початкова ширина */
+  transition: width 3s ease; /* Анімація руху прогресу */
+}
+
+/* Ховання/показ секції Skills */
+#skills-text {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease;
+}
+
+#skills-text.expanded {
+  max-height: 500px; /* Підбери потрібне значення */
+}
